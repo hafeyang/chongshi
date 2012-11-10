@@ -32,4 +32,21 @@
 	默认访问地址 http://localhost:3000
 
 
+##文档链接
+
+发现开发需要查阅文档，统一放在这里：
+
+[Markdown online eidtor](http://markable.in/editor/)
+
+Markdown语法：[Markdown cheatsheat](http://markable.in/file/aa191728-9dc7-11e1-91c7-984be164924a/ "Markdown cheatsheat")
+
+Express文档：[Express API](http://expressjs.com/api.html "Express API")
+
+Jade模板语法：[Jade](https://github.com/visionmedia/jade "jade template")
+
+modemon，监听文件自动重启node server:[nodemon] (https://github.com/remy/nodemon "nodemon")
+
+Mongodb驱动mongoosejs文档：[mongoosejs](http://mongoosejs.com/docs/index.html "mongoosejs") [mongoosejs github](https://github.com/learnboost/mongoose "mongoose github")
+
+
 Enjoy! Thanks :)
