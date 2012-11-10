@@ -48,5 +48,6 @@ modemon，监听文件自动重启node server:[nodemon] (https://github.com/remy
 
 Mongodb驱动mongoosejs文档：[mongoosejs](http://mongoosejs.com/docs/index.html "mongoosejs") [mongoosejs github](https://github.com/learnboost/mongoose "mongoose github")
 
+官方的mongo驱动[node mongodb native driver](https://github.com/mongodb/node-mongodb-native)
 
 Enjoy! Thanks :)
