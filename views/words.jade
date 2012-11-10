@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1= title
+		table
+			thead
+				tr
+					td 英文
+					td 中文
+					td 记住？
+			tbody
+				each word , i in list
+					tr
+						td #{word.name}
+						td #{word.chs}
+						td #{word.remembered?"Y":"N"}
