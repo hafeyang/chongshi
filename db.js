@@ -1,36 +1,32 @@
-var mongoose = require('mongoose')
-  , db = mongoose.createConnection('localhost', 'chongshi');
+var mongoose = require('mongoose');
+db = mongoose.connect('mongodb://localhost/chongshi',function(err,db) {
+    if (err) { 
+    	console.log(err);
+    }else{
+    	var Word =  mongoose.model('words',new mongoose.Schema({
+    		en:String,
+    		cn:String
+    	}));
 
 
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-	var WordSchema = new mongoose.Schema({
-	    en : String,
-	    chs : String,
-	    PhoneticSymbol:String
-	});
+    	var word = new Word({cn:"你好",en:"hello"});
 
-	var Word = mongoose.model('Word', WordSchema);
+    	word.save(function  (e) {
+    		// body...
+    	});
 
-
-	var helloWord = new Word({
-		en:"hello",
-		chs:"你好",
-		PhoneticSymbol:"heˈləu"
-	});
-
-	console.log(helloWord.chs);
-	
-	helloWord.save(function (err) {
-		if (err) // TODO handle the error
-	  		console.log('meow')
-	});
-
-	Word.find(function (err, words) {
-	  	console.log(words);
-	})
-
-
+    	Word.find(function  (err,w) {
+    		if(err){
+    			console.log();
+    		}else{
+    			for (var i = w.length - 1; i >= 0; i--) {
+    				var ww = w[i];
+    				ww.remove();
+    			};
+    			mongoose.disconnect();
+    		}
+    	})
+    }
 });
 
 
